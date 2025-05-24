@@ -31,6 +31,10 @@ app.use(mainRouter);
 app.use(teacherRouter);
 app.use(paymentRouter);
 app.use(appealRouter);
+app.post('/github-webhook', (req, res) => {
+  console.log('GitHub webhook payload:', req.body);
+  res.sendStatus(200); // Respond with 200 so GitHub knows it's OK
+});
 
 // Error Handling Middleware
 app.use(notFoundMiddleware);
