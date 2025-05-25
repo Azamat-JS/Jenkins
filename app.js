@@ -22,7 +22,7 @@ app.use('/crmswagger', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
 app.get('/', (req, res) => {
-  res.send('Welcome to DevOps world!')
+  res.send('Welcome to our DevOps world!')
 })
 // Routes
 app.use(groupRouter);
